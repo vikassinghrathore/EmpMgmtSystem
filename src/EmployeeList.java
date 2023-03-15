@@ -1,10 +1,9 @@
 import com.emp.Employee;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.Map.Entry;
+import java.util.Optional;
 
 class EmployeeList {
     public static void main(String[] args) {
@@ -43,7 +42,19 @@ class EmployeeList {
         System.out.println(avgAgeOfMaleAndFemale);
 
         //Highest paid employee in orgnizations
+        Optional<Employee> highestPaidEmployee = employeeList
+                .stream().collect(Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary)));
+        Employee highestPayEmployee = highestPaidEmployee.get();
 
+        System.out.println("Details Of Highest Paid Employee : ");
+        System.out.println("==================================");
+        System.out.println("ID : " + highestPayEmployee.getId());
+        System.out.println("Name : " + highestPayEmployee.getName());
+        System.out.println("Age : " + highestPayEmployee.getAge());
+        System.out.println("Gender : " + highestPayEmployee.getGender());
+        System.out.println("Department : " + highestPayEmployee.getDepartment());
+        System.out.println("Year Of Joining : " + highestPayEmployee.getYearOfJoining());
+        System.out.println("Salary : " + highestPayEmployee.getSalary());
     }
 }
 
