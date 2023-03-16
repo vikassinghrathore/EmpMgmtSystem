@@ -41,7 +41,7 @@ class EmployeeList {
                 .stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingInt(Employee::getAge)));
         System.out.println(avgAgeOfMaleAndFemale);
 
-        //Highest paid employee in orgnizations
+        //4.Highest paid employee in orgnizations
         Optional<Employee> highestPaidEmployee = employeeList
                 .stream().collect(Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary)));
         Employee highestPayEmployee = highestPaidEmployee.get();
@@ -55,6 +55,25 @@ class EmployeeList {
         System.out.println("Department : " + highestPayEmployee.getDepartment());
         System.out.println("Year Of Joining : " + highestPayEmployee.getYearOfJoining());
         System.out.println("Salary : " + highestPayEmployee.getSalary());
+
+        //5.employee how joined after 2015
+        employeeList.stream().filter(e -> e.getYearOfJoining() > 2015).map(Employee::getName).forEach(System.out::println);
+
+        //6.count the no of employee each deparment
+        Map<String, Long> countNoOfEmployeeEachDept = employeeList.stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment, Collectors.counting()));
+        Set<Entry<String, Long>> entrySet = countNoOfEmployeeEachDept.entrySet();
+        for (Entry<String, Long> entry : entrySet) {
+            System.out.println(entry.getKey() + "" + entry.getValue());
+        }
+        //7.average salary of each department
+        Map<String, Double> avgSalaryOfEachDept = employeeList
+                .stream().collect(Collectors.groupingBy(Employee::getDepartment, Collectors.averagingDouble(Employee::getSalary)));
+        Set<Entry<String, Double>> entrySet1 = avgSalaryOfEachDept.entrySet();
+        for (Entry<String, Double> doubleEntry : entrySet1) {
+            System.out.println(doubleEntry.getKey() + "" + doubleEntry.getValue());
+        }
+        //8.Details of youngest male employee in the product development department?
     }
 }
 
