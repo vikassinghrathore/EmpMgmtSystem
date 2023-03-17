@@ -1,9 +1,8 @@
 import com.emp.Employee;
 
 import java.util.*;
-import java.util.stream.Collectors;
 import java.util.Map.Entry;
-import java.util.Optional;
+import java.util.stream.Collectors;
 
 class EmployeeList {
     public static void main(String[] args) {
@@ -17,7 +16,7 @@ class EmployeeList {
         employeeList.add(new Employee(167, "Farukhi", 44, "Male", "Security & Transport", 2016, 10500.0));
         employeeList.add(new Employee(178, "Shantanu Sharma", 36, "Male", "Account & Finance", 2010, 27000.0));
         employeeList.add(new Employee(189, "Lue", 32, "Male", "Product Development", 2015, 34500.0));
-        employeeList.add(new Employee(199, "Camrun green", 25, "Female", "Sales & Marketing", 2016, 11500.0));
+        employeeList.add(new Employee(199, "Cameron green", 25, "Female", "Sales & Marketing", 2016, 11500.0));
         employeeList.add(new Employee(201, "Darren", 38, "Male", "Security & Transport", 2015, 11000.5));
         employeeList.add(new Employee(212, "Jaslin Kaur", 28, "Female", "Infrastructure", 2014, 15700.0));
         employeeList.add(new Employee(223, "Vinay", 26, "Male", "Product Development", 2016, 28200.0));
@@ -73,7 +72,89 @@ class EmployeeList {
         for (Entry<String, Double> doubleEntry : entrySet1) {
             System.out.println(doubleEntry.getKey() + "" + doubleEntry.getValue());
         }
-        //8.Details of youngest male employee in the product development department?
+        //8.Details of Youngest male employee in the product development department
+        Optional<Employee> youngestMaleEmployeeProductDevelopmentDepartmentWrapper = employeeList
+                .stream().filter(e -> e.getGender() == "Male" && e.getDepartment() == "Product Development")
+                .min(Comparator.comparing(Employee::getAge));
+        Employee youngestMaleEmployeeProductDevelopmentDepartment = youngestMaleEmployeeProductDevelopmentDepartmentWrapper.get();
+
+        System.out.println("Details Of Youngest Male Employee In Product Development");
+        System.out.println("----------------------------------------------");
+        System.out.println("ID : " + youngestMaleEmployeeProductDevelopmentDepartment.getId());
+        System.out.println("Name : " + youngestMaleEmployeeProductDevelopmentDepartment.getName());
+        System.out.println("Age : " + youngestMaleEmployeeProductDevelopmentDepartment.getAge());
+        System.out.println("Year Of Joinging : " + youngestMaleEmployeeProductDevelopmentDepartment.getYearOfJoining());
+        System.out.println("Salary : " + youngestMaleEmployeeProductDevelopmentDepartment.getSalary());
+
+        //9.Most working experience in the organization
+        Optional<Employee> mostWorkingExperienceInOrg = employeeList
+                .stream().sorted(Comparator.comparingInt(Employee::getYearOfJoining)).findFirst();
+        Employee mostWorkingExperience = mostWorkingExperienceInOrg.get();
+        System.out.println("Seniour most employee details");
+        System.out.println("ID : " + mostWorkingExperience.getId());
+        System.out.println("Name : " + mostWorkingExperience.getName());
+        System.out.println("Age : " + mostWorkingExperience.getAge());
+        System.out.println("Gender : " + mostWorkingExperience.getGender());
+        System.out.println("Age : " + mostWorkingExperience.getDepartment());
+        System.out.println("Year Of Joining : " + mostWorkingExperience.getYearOfJoining());
+        System.out.println("Salary : " + mostWorkingExperience.getSalary());
+
+        //10.How many male and female employees are there in the sales and marketing dept
+        Map<String, Long> countMaleFemaleEmployeeSalesAndMarketing = employeeList
+                .stream()
+                .filter(e -> e.getDepartment() == "Sales & Marketing")
+                .collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
+        System.out.println("CountMaleFemaleEmployeeSalesAndMarketing = " + countMaleFemaleEmployeeSalesAndMarketing);
+
+        //11.average salary of male and female employees
+        Map<String, Double> avgSalMaleAndfemaleEmplyee = employeeList
+                .stream()
+                .collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingDouble(Employee::getSalary)));
+        System.out.println("AvgSalMaleAndfemaleEmplyee = " + avgSalMaleAndfemaleEmplyee);
+
+        //12.List down the names of all employees in each department
+        Map<String, List<Employee>> employeeListByDepartment = employeeList
+                .stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment));
+        Set<Entry<String, List<Employee>>> entrySet2 = employeeListByDepartment.entrySet();
+        for (Entry<String, List<Employee>> entry : entrySet2) {
+            System.out.println("++++++++++++++++++++++++");
+            System.out.println("Employees In " + entry.getKey() + " : ");
+            System.out.println("++++++++++++++++++++++++");
+            List<Employee> list = entry.getValue();
+            for (Employee e : list) {
+                System.out.println(e.getName());
+            }
+        }
+        //13.avg sal and total sal
+        DoubleSummaryStatistics employeeSalStatics = employeeList
+                .stream().collect(Collectors.summarizingDouble(Employee::getSalary));
+        System.out.println("Avg Sal:" + employeeSalStatics.getAverage());
+        System.out.println("Total sal: " + employeeSalStatics.getSum());
+
+        //14. Oldest employee in the organization? What is his age and which department belongs
+        Optional<Employee> oldestEmployeeInOrg = employeeList.stream().max(Comparator.comparingInt(Employee::getAge));
+        Employee oldEmployee = oldestEmployeeInOrg.get();
+        System.out.println("Name : " + oldEmployee.getName());
+        System.out.println("Age : " + oldEmployee.getAge());
+        System.out.println("Department : " + oldEmployee.getDepartment());
+
+        //15.Separate the employees who are younger or equal to 25 years from those employees who are older than 25 years.
+        Map<Boolean, List<Employee>> partitionByEmpAge = employeeList.stream().collect(Collectors.partitioningBy(e -> e.getAge() > 25));
+        Set<Entry<Boolean, List<Employee>>> entrySet3 = partitionByEmpAge.entrySet();
+        for (Entry<Boolean, List<Employee>> entry : entrySet3) {
+            System.out.println("+++++++++++++++++++++++++");
+            if (entry.getKey()) {
+                System.out.println("Employees older than 25 years :");
+            } else {
+                System.out.println("Employees younger than or equal to 25 years :");
+            }
+            System.out.println("+++++++++++++++++++++++++");
+            List<Employee> list = entry.getValue();
+            for (Employee e : list) {
+                System.out.println(e.getName());
+            }
+        }
     }
 }
 
