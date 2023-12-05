@@ -1,0 +1,150 @@
+EmployeeList all output::
+{Male=11, Female=6}
+++++++++++++++++++++++++++++
+HR
+Sales & Marketing
+Infrastructure
+Product Development
+Security & Transport
+Account & Finance
+{Male=31.09090909090909, Female=28.166666666666668}
+Details Of Highest Paid Employee :
+==================================
+ID : 278
+Name : AK Gupta
+Age : 32
+Gender : Male
+Department : Product Development
+Year Of Joining : 2012
+Salary : 35700.0
+Farukhi
+Cameron green
+Vinay
+Donnie
+Ali Z
+Product Development5
+Account & Finance2
+Security & Transport2
+Infrastructure3
+HR2
+Sales & Marketing3
+Product Development31960.0
+Account & Finance24150.0
+Security & Transport10750.25
+Infrastructure15466.666666666666
+HR23850.0
+Sales & Marketing11900.166666666666
+Details Of Youngest Male Employee In Product Development
+----------------------------------------------
+ID : 223
+Name : Vinay
+Age : 26
+Year Of Joinging : 2016
+Salary : 28200.0
+Seniour most employee details
+ID : 178
+Name : Shantanu Sharma
+Age : 36
+Gender : Male
+Age : Account & Finance
+Year Of Joining : 2010
+Salary : 27000.0
+CountMaleFemaleEmployeeSalesAndMarketing = {Female=1, Male=2}
+AvgSalMaleAndfemaleEmplyee = {Male=21300.090909090908, Female=20850.0}
+++++++++++++++++++++++++
+Employees In Product Development :
+++++++++++++++++++++++++
+Murarry
+Lue
+Vinay
+Sanskriti Singh
+AK Gupta
+++++++++++++++++++++++++
+Employees In Account & Finance :
+++++++++++++++++++++++++
+Shantanu Sharma
+Vasanthi Reddy
+++++++++++++++++++++++++
+Employees In Security & Transport :
+++++++++++++++++++++++++
+Farukhi
+Darren
+++++++++++++++++++++++++
+Employees In Infrastructure :
+++++++++++++++++++++++++
+Luthar
+Jaslin Kaur
+Ali Z
+++++++++++++++++++++++++
+Employees In HR :
+++++++++++++++++++++++++
+Sneha
+Nima Singh
+++++++++++++++++++++++++
+Employees In Sales & Marketing :
+++++++++++++++++++++++++
+Gautam
+Cameron green
+Donnie
+Avg Sal:21141.235294117647
+Total sal: 359401.0
+Name : Farukhi
+Age : 44
+Department : Security & Transport
++++++++++++++++++++++++++
+Employees younger than or equal to 25 years :
++++++++++++++++++++++++++
+Cameron green
+Donnie
+Ali Z
+Employee{id=278, name='AK Gupta', age=32, gender='Male', department='Product Development', yearOfJoining=2012, salary=35700.0}
+Employee{id=256, name='Ali Z', age=24, gender='Male', department='Infrastructure', yearOfJoining=2018, salary=12700.0}
+Employee{id=199, name='Cameron green', age=25, gender='Female', department='Sales & Marketing', yearOfJoining=2016, salary=11500.0}
+Employee{id=201, name='Darren', age=38, gender='Male', department='Security & Transport', yearOfJoining=2015, salary=11000.5}
+Employee{id=245, name='Donnie', age=25, gender='Male', department='Sales & Marketing', yearOfJoining=2017, salary=10700.5}
+Employee{id=167, name='Farukhi', age=44, gender='Male', department='Security & Transport', yearOfJoining=2016, salary=10500.0}
+Employee{id=123, name='Gautam', age=26, gender='Male', department='Sales & Marketing', yearOfJoining=2015, salary=13500.0}
+Employee{id=212, name='Jaslin Kaur', age=28, gender='Female', department='Infrastructure', yearOfJoining=2014, salary=15700.0}
+Employee{id=189, name='Lue', age=32, gender='Male', department='Product Development', yearOfJoining=2015, salary=34500.0}
+Employee{id=134, name='Luthar', age=30, gender='Male', department='Infrastructure', yearOfJoining=2012, salary=18000.0}
+Employee{id=145, name='Murarry', age=29, gender='Male', department='Product Development', yearOfJoining=2014, salary=32500.0}
+Employee{id=156, name='Nima Singh', age=28, gender='Female', department='HR', yearOfJoining=2013, salary=22700.0}
+Employee{id=267, name='Sanskriti Singh', age=27, gender='Female', department='Product Development', yearOfJoining=2015, salary=28900.0}
+Employee{id=178, name='Shantanu Sharma', age=36, gender='Male', department='Account & Finance', yearOfJoining=2010, salary=27000.0}
+Employee{id=111, name='Sneha', age=33, gender='Female', department='HR', yearOfJoining=2011, salary=25000.0}
+Employee{id=234, name='Vasanthi Reddy', age=28, gender='Female', department='Account & Finance', yearOfJoining=2013, salary=21300.0}
+Employee{id=223, name='Vinay', age=26, gender='Male', department='Product Development', yearOfJoining=2016, salary=28200.0}
++++++++++++++++++++++++++
+Employees older than 25 years :
++++++++++++++++++++++++++
+Sneha
+Gautam
+Luthar
+Murarry
+Nima Singh
+Farukhi
+Shantanu Sharma
+Lue
+Darren
+Jaslin Kaur
+Vinay
+Vasanthi Reddy
+Sanskriti Singh
+AK Gupta
+Employee{id=278, name='AK Gupta', age=32, gender='Male', department='Product Development', yearOfJoining=2012, salary=35700.0}
+Employee{id=256, name='Ali Z', age=24, gender='Male', department='Infrastructure', yearOfJoining=2018, salary=12700.0}
+Employee{id=199, name='Cameron green', age=25, gender='Female', department='Sales & Marketing', yearOfJoining=2016, salary=11500.0}
+Employee{id=201, name='Darren', age=38, gender='Male', department='Security & Transport', yearOfJoining=2015, salary=11000.5}
+Employee{id=245, name='Donnie', age=25, gender='Male', department='Sales & Marketing', yearOfJoining=2017, salary=10700.5}
+Employee{id=167, name='Farukhi', age=44, gender='Male', department='Security & Transport', yearOfJoining=2016, salary=10500.0}
+Employee{id=123, name='Gautam', age=26, gender='Male', department='Sales & Marketing', yearOfJoining=2015, salary=13500.0}
+Employee{id=212, name='Jaslin Kaur', age=28, gender='Female', department='Infrastructure', yearOfJoining=2014, salary=15700.0}
+Employee{id=189, name='Lue', age=32, gender='Male', department='Product Development', yearOfJoining=2015, salary=34500.0}
+Employee{id=134, name='Luthar', age=30, gender='Male', department='Infrastructure', yearOfJoining=2012, salary=18000.0}
+Employee{id=145, name='Murarry', age=29, gender='Male', department='Product Development', yearOfJoining=2014, salary=32500.0}
+Employee{id=156, name='Nima Singh', age=28, gender='Female', department='HR', yearOfJoining=2013, salary=22700.0}
+Employee{id=267, name='Sanskriti Singh', age=27, gender='Female', department='Product Development', yearOfJoining=2015, salary=28900.0}
+Employee{id=178, name='Shantanu Sharma', age=36, gender='Male', department='Account & Finance', yearOfJoining=2010, salary=27000.0}
+Employee{id=111, name='Sneha', age=33, gender='Female', department='HR', yearOfJoining=2011, salary=25000.0}
+Employee{id=234, name='Vasanthi Reddy', age=28, gender='Female', department='Account & Finance', yearOfJoining=2013, salary=21300.0}
+Employee{id=223, name='Vinay', age=26, gender='Male', department='Product Development', yearOfJoining=2016, salary=28200.0}

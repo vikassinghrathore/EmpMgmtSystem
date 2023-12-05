@@ -2,6 +2,7 @@ import com.emp.Employee;
 
 import java.util.*;
 import java.util.Map.Entry;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 class EmployeeList {
@@ -154,6 +155,16 @@ class EmployeeList {
             for (Employee e : list) {
                 System.out.println(e.getName());
             }
+            //sorting on name,age,dept
+            Collections.sort(employeeList, Comparator.comparing(Employee::getName).thenComparingInt(Employee::getAge));
+
+           // final Function<Employee, Integer> byAge = emplist -> emplist.getAge();
+            //final Function<Employee, String> byTheirName = emplist -> emplist.getName();
+            //System.out.println("Sorted in ascending order by age and name: ");
+            List<Employee> sortedlist =   employeeList.stream()
+                    .sorted(Comparator.comparing(Employee::getName).thenComparing(Employee::getAge).thenComparing(Employee::getDepartment))
+                    .collect(Collectors.toList());
+            sortedlist.forEach(System.out::println);
         }
     }
 }

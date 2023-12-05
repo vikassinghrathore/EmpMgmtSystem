@@ -1,0 +1,105 @@
+EmployeeList1 all output::
+Highest Salary in the organisation :: 160
+Second Highest Salary in the organisation :: 150
+Nth  Highest Salary in the organisation :: 115
+Highest paid male and female employee :: {F=Optional[Employee1{id=5, name='ijk', age=22, salary=150, gender='F', deptName='IT', city='Noida', yearOfJoining='2013'}], M=Optional[Employee1{id=19, name='stv', age=25, salary=160, gender='M', deptName='IT', city='Blore', yearOfJoining='2010'}]}
+Lowest paid male and female employee :: {F=Optional[Employee1{id=2, name='xyz', age=29, salary=120, gender='F', deptName='HR', city='Hyderabad', yearOfJoining='2015'}], M=Optional[Employee1{id=3, name='efg', age=30, salary=115, gender='M', deptName='HR', city='Chennai', yearOfJoining='2014'}]}
+Sorting the organisation's employee salary in ascending order
+Employee1{id=3, name='efg', age=30, salary=115, gender='M', deptName='HR', city='Chennai', yearOfJoining='2014'}
+Employee1{id=2, name='xyz', age=29, salary=120, gender='F', deptName='HR', city='Hyderabad', yearOfJoining='2015'}
+Employee1{id=1, name='abc', age=28, salary=123, gender='F', deptName='HR', city='Blore', yearOfJoining='2020'}
+Employee1{id=4, name='def', age=32, salary=125, gender='F', deptName='HR', city='Chennai', yearOfJoining='2013'}
+Employee1{id=7, name='uvw', age=26, salary=130, gender='F', deptName='IT', city='Pune', yearOfJoining='2016'}
+Employee1{id=6, name='mno', age=27, salary=140, gender='M', deptName='IT', city='Gurugram', yearOfJoining='2017'}
+Employee1{id=8, name='pqr', age=23, salary=145, gender='M', deptName='IT', city='Trivandam', yearOfJoining='2015'}
+Employee1{id=5, name='ijk', age=22, salary=150, gender='F', deptName='IT', city='Noida', yearOfJoining='2013'}
+Employee1{id=19, name='stv', age=25, salary=160, gender='M', deptName='IT', city='Blore', yearOfJoining='2010'}
+Sorting the organisation's employee salary in descending order
+Employee1{id=19, name='stv', age=25, salary=160, gender='M', deptName='IT', city='Blore', yearOfJoining='2010'}
+Employee1{id=5, name='ijk', age=22, salary=150, gender='F', deptName='IT', city='Noida', yearOfJoining='2013'}
+Employee1{id=8, name='pqr', age=23, salary=145, gender='M', deptName='IT', city='Trivandam', yearOfJoining='2015'}
+Employee1{id=6, name='mno', age=27, salary=140, gender='M', deptName='IT', city='Gurugram', yearOfJoining='2017'}
+Employee1{id=7, name='uvw', age=26, salary=130, gender='F', deptName='IT', city='Pune', yearOfJoining='2016'}
+Employee1{id=4, name='def', age=32, salary=125, gender='F', deptName='HR', city='Chennai', yearOfJoining='2013'}
+Employee1{id=1, name='abc', age=28, salary=123, gender='F', deptName='HR', city='Blore', yearOfJoining='2020'}
+Employee1{id=2, name='xyz', age=29, salary=120, gender='F', deptName='HR', city='Hyderabad', yearOfJoining='2015'}
+Employee1{id=3, name='efg', age=30, salary=115, gender='M', deptName='HR', city='Chennai', yearOfJoining='2014'}
+Highest salary dept wise::
+{HR=Optional[Employee1{id=4, name='def', age=32, salary=125, gender='F', deptName='HR', city='Chennai', yearOfJoining='2013'}], IT=Optional[Employee1{id=19, name='stv', age=25, salary=160, gender='M', deptName='IT', city='Blore', yearOfJoining='2010'}]}
+Highest second salary dept wise::
+{HR=Optional[Employee1{id=1, name='abc', age=28, salary=123, gender='F', deptName='HR', city='Blore', yearOfJoining='2020'}], IT=Optional[Employee1{id=5, name='ijk', age=22, salary=150, gender='F', deptName='IT', city='Noida', yearOfJoining='2013'}]}
+Sorting the department wise employee salary in ascending order::
+HR
+[Employee1{id=3, name='efg', age=30, salary=115, gender='M', deptName='HR', city='Chennai', yearOfJoining='2014'}, Employee1{id=2, name='xyz', age=29, salary=120, gender='F', deptName='HR', city='Hyderabad', yearOfJoining='2015'}, Employee1{id=1, name='abc', age=28, salary=123, gender='F', deptName='HR', city='Blore', yearOfJoining='2020'}, Employee1{id=4, name='def', age=32, salary=125, gender='F', deptName='HR', city='Chennai', yearOfJoining='2013'}]
+IT
+[Employee1{id=7, name='uvw', age=26, salary=130, gender='F', deptName='IT', city='Pune', yearOfJoining='2016'}, Employee1{id=6, name='mno', age=27, salary=140, gender='M', deptName='IT', city='Gurugram', yearOfJoining='2017'}, Employee1{id=8, name='pqr', age=23, salary=145, gender='M', deptName='IT', city='Trivandam', yearOfJoining='2015'}, Employee1{id=5, name='ijk', age=22, salary=150, gender='F', deptName='IT', city='Noida', yearOfJoining='2013'}, Employee1{id=19, name='stv', age=25, salary=160, gender='M', deptName='IT', city='Blore', yearOfJoining='2010'}]
+Sorting the department wise employee salary in descending order
+HR
+[Employee1{id=4, name='def', age=32, salary=125, gender='F', deptName='HR', city='Chennai', yearOfJoining='2013'}, Employee1{id=1, name='abc', age=28, salary=123, gender='F', deptName='HR', city='Blore', yearOfJoining='2020'}, Employee1{id=2, name='xyz', age=29, salary=120, gender='F', deptName='HR', city='Hyderabad', yearOfJoining='2015'}, Employee1{id=3, name='efg', age=30, salary=115, gender='M', deptName='HR', city='Chennai', yearOfJoining='2014'}]
+IT
+[Employee1{id=19, name='stv', age=25, salary=160, gender='M', deptName='IT', city='Blore', yearOfJoining='2010'}, Employee1{id=5, name='ijk', age=22, salary=150, gender='F', deptName='IT', city='Noida', yearOfJoining='2013'}, Employee1{id=8, name='pqr', age=23, salary=145, gender='M', deptName='IT', city='Trivandam', yearOfJoining='2015'}, Employee1{id=6, name='mno', age=27, salary=140, gender='M', deptName='IT', city='Gurugram', yearOfJoining='2017'}, Employee1{id=7, name='uvw', age=26, salary=130, gender='F', deptName='IT', city='Pune', yearOfJoining='2016'}]
+Employees grouped by city ::
+{Chennai=[Employee1{id=3, name='efg', age=30, salary=115, gender='M', deptName='HR', city='Chennai', yearOfJoining='2014'}, Employee1{id=4, name='def', age=32, salary=125, gender='F', deptName='HR', city='Chennai', yearOfJoining='2013'}], Trivandam=[Employee1{id=8, name='pqr', age=23, salary=145, gender='M', deptName='IT', city='Trivandam', yearOfJoining='2015'}], Pune=[Employee1{id=7, name='uvw', age=26, salary=130, gender='F', deptName='IT', city='Pune', yearOfJoining='2016'}], Noida=[Employee1{id=5, name='ijk', age=22, salary=150, gender='F', deptName='IT', city='Noida', yearOfJoining='2013'}], Blore=[Employee1{id=1, name='abc', age=28, salary=123, gender='F', deptName='HR', city='Blore', yearOfJoining='2020'}, Employee1{id=19, name='stv', age=25, salary=160, gender='M', deptName='IT', city='Blore', yearOfJoining='2010'}], Gurugram=[Employee1{id=6, name='mno', age=27, salary=140, gender='M', deptName='IT', city='Gurugram', yearOfJoining='2017'}], Hyderabad=[Employee1{id=2, name='xyz', age=29, salary=120, gender='F', deptName='HR', city='Hyderabad', yearOfJoining='2015'}]}
+Employees grouped by age ::
+{32=[Employee1{id=4, name='def', age=32, salary=125, gender='F', deptName='HR', city='Chennai', yearOfJoining='2013'}], 22=[Employee1{id=5, name='ijk', age=22, salary=150, gender='F', deptName='IT', city='Noida', yearOfJoining='2013'}], 23=[Employee1{id=8, name='pqr', age=23, salary=145, gender='M', deptName='IT', city='Trivandam', yearOfJoining='2015'}], 25=[Employee1{id=19, name='stv', age=25, salary=160, gender='M', deptName='IT', city='Blore', yearOfJoining='2010'}], 26=[Employee1{id=7, name='uvw', age=26, salary=130, gender='F', deptName='IT', city='Pune', yearOfJoining='2016'}], 27=[Employee1{id=6, name='mno', age=27, salary=140, gender='M', deptName='IT', city='Gurugram', yearOfJoining='2017'}], 28=[Employee1{id=1, name='abc', age=28, salary=123, gender='F', deptName='HR', city='Blore', yearOfJoining='2020'}], 29=[Employee1{id=2, name='xyz', age=29, salary=120, gender='F', deptName='HR', city='Hyderabad', yearOfJoining='2015'}], 30=[Employee1{id=3, name='efg', age=30, salary=115, gender='M', deptName='HR', city='Chennai', yearOfJoining='2014'}]}
+Distinct department names that employees work for::
+HR
+IT
+Names of all departments in the organization
+HR
+IT
+Count of male and female employees present in the organization::
+{F=5, M=4}
+Employee details whose age is > than 28
+Employee1{id=2, name='xyz', age=29, salary=120, gender='F', deptName='HR', city='Hyderabad', yearOfJoining='2015'}
+Employee1{id=3, name='efg', age=30, salary=115, gender='M', deptName='HR', city='Chennai', yearOfJoining='2014'}
+Employee1{id=4, name='def', age=32, salary=125, gender='F', deptName='HR', city='Chennai', yearOfJoining='2013'}
+Maximum age: 32
+Maximum age of Employee: 32
+Avg age of Male and Female Employees:: {F=27.4, M=26.25}
+Number of employees in each department
+HR : 4
+IT : 5
+Oldest employee details::
+Employee1{id=4, name='def', age=32, salary=125, gender='F', deptName='HR', city='Chennai', yearOfJoining='2013'}
+Youngest Female employee details::
+Employee1{id=5, name='ijk', age=22, salary=150, gender='F', deptName='IT', city='Noida', yearOfJoining='2013'}
+Employees whose age is greater than 25 and less than 25
+Employees less than 30 years ::[Employee1{id=1, name='abc', age=28, salary=123, gender='F', deptName='HR', city='Blore', yearOfJoining='2020'}, Employee1{id=2, name='xyz', age=29, salary=120, gender='F', deptName='HR', city='Hyderabad', yearOfJoining='2015'}, Employee1{id=3, name='efg', age=30, salary=115, gender='M', deptName='HR', city='Chennai', yearOfJoining='2014'}, Employee1{id=5, name='ijk', age=22, salary=150, gender='F', deptName='IT', city='Noida', yearOfJoining='2013'}, Employee1{id=6, name='mno', age=27, salary=140, gender='M', deptName='IT', city='Gurugram', yearOfJoining='2017'}, Employee1{id=7, name='uvw', age=26, salary=130, gender='F', deptName='IT', city='Pune', yearOfJoining='2016'}, Employee1{id=8, name='pqr', age=23, salary=145, gender='M', deptName='IT', city='Trivandam', yearOfJoining='2015'}, Employee1{id=19, name='stv', age=25, salary=160, gender='M', deptName='IT', city='Blore', yearOfJoining='2010'}]
+Employees greater than 30 years ::[Employee1{id=4, name='def', age=32, salary=125, gender='F', deptName='HR', city='Chennai', yearOfJoining='2013'}]
+MAX no of employees present in Department :: IT
+Found Employees from HR department Employee1{id=1, name='abc', age=28, salary=123, gender='F', deptName='HR', city='Blore', yearOfJoining='2020'}
+Department names where the number of employees in the department is over 3 ::
+HR=4
+IT=5
+Employees staying in Blore:: abc
+Employees staying in Blore:: stv
+No of employees in the organisation :: 9
+Employee department and its count :-
+{HR=4, IT=5}Department which has the highest number of employees IT=5
+Sorting Acendind a Stream based on age and name.
+Employee1{id=1, name='abc', age=28, salary=123, gender='F', deptName='HR', city='Blore', yearOfJoining='2020'}
+Employee1{id=4, name='def', age=32, salary=125, gender='F', deptName='HR', city='Chennai', yearOfJoining='2013'}
+Employee1{id=3, name='efg', age=30, salary=115, gender='M', deptName='HR', city='Chennai', yearOfJoining='2014'}
+Employee1{id=5, name='ijk', age=22, salary=150, gender='F', deptName='IT', city='Noida', yearOfJoining='2013'}
+Employee1{id=6, name='mno', age=27, salary=140, gender='M', deptName='IT', city='Gurugram', yearOfJoining='2017'}
+Employee1{id=8, name='pqr', age=23, salary=145, gender='M', deptName='IT', city='Trivandam', yearOfJoining='2015'}
+Employee1{id=19, name='stv', age=25, salary=160, gender='M', deptName='IT', city='Blore', yearOfJoining='2010'}
+Employee1{id=7, name='uvw', age=26, salary=130, gender='F', deptName='IT', city='Pune', yearOfJoining='2016'}
+Employee1{id=2, name='xyz', age=29, salary=120, gender='F', deptName='HR', city='Hyderabad', yearOfJoining='2015'}
+Sorted in Decending order by age and name:
+Employee1{id=2, name='xyz', age=29, salary=120, gender='F', deptName='HR', city='Hyderabad', yearOfJoining='2015'}
+Employee1{id=7, name='uvw', age=26, salary=130, gender='F', deptName='IT', city='Pune', yearOfJoining='2016'}
+Employee1{id=19, name='stv', age=25, salary=160, gender='M', deptName='IT', city='Blore', yearOfJoining='2010'}
+Employee1{id=8, name='pqr', age=23, salary=145, gender='M', deptName='IT', city='Trivandam', yearOfJoining='2015'}
+Employee1{id=6, name='mno', age=27, salary=140, gender='M', deptName='IT', city='Gurugram', yearOfJoining='2017'}
+Employee1{id=5, name='ijk', age=22, salary=150, gender='F', deptName='IT', city='Noida', yearOfJoining='2013'}
+Employee1{id=3, name='efg', age=30, salary=115, gender='M', deptName='HR', city='Chennai', yearOfJoining='2014'}
+Employee1{id=4, name='def', age=32, salary=125, gender='F', deptName='HR', city='Chennai', yearOfJoining='2013'}
+Employee1{id=1, name='abc', age=28, salary=123, gender='F', deptName='HR', city='Blore', yearOfJoining='2020'}
+Senior Employee Details :Employee1{id=19, name='stv', age=25, salary=160, gender='M', deptName='IT', city='Blore', yearOfJoining='2010'}
+Total Salary:1208.0
+Avg Salary :134.22222222222223
+Print Average salary of each department
+HR : 120.75
+IT : 145.0
